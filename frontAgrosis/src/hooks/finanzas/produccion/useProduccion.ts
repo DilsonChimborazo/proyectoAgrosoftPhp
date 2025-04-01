@@ -36,15 +36,35 @@ export interface Cultivo {
 
 export interface Produccion {
   id_produccion: number;
-  fk_id: Cultivo | null;
-  cantidad_produccion: number;
-  fecha: string;
+  fk_id_cultivo: number;
+  cantidad_producida: number;
+  fecha_produccion: string;
+  fk_id_lote: number;
+  descripcion_produccion: string;
+  estado: string;
+  fecha_cosecha: string;
 }
 
 const fetchProduccion = async (): Promise<Produccion[]> => {
+  const token = localStorage.getItem("token");
+  
+  if (!token) {
+    throw new Error("No autorizado. Inicie sesión.");
+  }
+
   try {
-    const { data } = await axios.get(`${apiUrl}produccion/`);
-    return data;
+    const { data } = await axios.get(`${apiUrl}produccion/`,{
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!data || !Array.isArray(data.data)) {
+      console.error("La API no devolvió un array:", data);
+      throw new Error("Respuesta inesperada de la API");
+    }
+
+    return data.data;
   } catch (error) {
     console.error("Error al obtener los datos de producción:", error);
     throw new Error("No se pudo obtener la lista de producción");

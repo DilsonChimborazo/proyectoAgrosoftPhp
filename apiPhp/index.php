@@ -11,8 +11,6 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 header("Content-Type: application/json; charset=UTF-8");
 
-
-
 // Manejar solicitudes OPTIONS (CORS Preflight)
 if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
     http_response_code(200);
@@ -31,12 +29,20 @@ if ($index === false || !isset($request[$index + 1])) {
     exit();
 }
 
-// Manejo de rutas especiales para autenticación
+// Manejo de rutas especiales para autenticación y registro sin autenticación
 if ($request[$index + 1] === "auth") {
     $authAction = $request[$index + 2] ?? null;
 
     if ($authAction === "login") {
         require_once __DIR__ . "/auth/login.php";
+        exit();
+    }
+
+    if ($authAction === "create") {
+        require_once __DIR__ . "/Controllers/UsuarioController.php";
+        
+        $userController = new UsuarioController();
+        $userController->create(); // Permite registrar un usuario sin autenticación
         exit();
     }
 
@@ -50,7 +56,7 @@ if ($request[$index + 1] === "auth") {
     exit();
 }
 
-// Proteger todo menos login/validate
+// Proteger todas las rutas excepto login y registro público
 require_once 'auth/authMiddleware.php';
 verifyToken(); // Si no pasa, corta aquí mismo el flujo
 

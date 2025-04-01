@@ -5,15 +5,26 @@ const apiUrl = import.meta.env.VITE_API_URL;
 
 // Interfaz para Ubicacion
 export interface Ubicacion {
-  id: number;
+  id_ubicacion: number;
   latitud: number;
   longitud: number;
 }
 
-// Función para obtener las ubicaciones desde la API
+// Función para obtener las ubicaciones desde la API con autenticación
 const fetchUbicaciones = async (): Promise<Ubicacion[]> => {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    throw new Error("No autorizado. Inicie sesión.");
+  }
+
   try {
-    const { data } = await axios.get(`${apiUrl}ubicacion/`); // Ajusta la ruta según tu API
+    const { data } = await axios.get(`${apiUrl}ubicacion/`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/json",
+      },
+    });
     return data;
   } catch (error) {
     console.error("Error al obtener las ubicaciones:", error);

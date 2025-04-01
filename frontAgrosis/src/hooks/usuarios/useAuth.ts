@@ -3,7 +3,7 @@ import { useState } from "react";
 export function useAuth() {
   const [error, setError] = useState<string | null>(null);
 
-  const login = async (identificacion: string, password: string) => {
+  const login = async (identificacion: string, contrasena: string) => {
     setError(null);
 
     const apiUrl = import.meta.env.VITE_API_URL;
@@ -14,12 +14,12 @@ export function useAuth() {
     }
 
     try {
-      const response = await fetch(`${apiUrl}token/`, {
+      const response = await fetch(`${apiUrl}auth/login/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ identificacion, password }),
+        body: JSON.stringify({ identificacion, contrasena }),
       });
 
       const data = await response.json();

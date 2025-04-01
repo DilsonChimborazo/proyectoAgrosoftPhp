@@ -96,7 +96,10 @@ class UsuarioController
             return;
         }
 
-        if ($this->usuario->crearUsuario($data['identificacion'], $data['nombre'], $data['contrasena'], $data['email'], $data['fk_id_rol'])) {
+        // Encriptar la contraseña antes de guardarla
+        $hashedPassword = password_hash($data['contrasena'], PASSWORD_BCRYPT);
+
+        if ($this->usuario->crearUsuario($data['identificacion'], $data['nombre'], $hashedPassword, $data['email'], $data['fk_id_rol'])) {
             echo json_encode(["message" => "Usuario registrado exitosamente"]);
             http_response_code(201);
         } else {
@@ -122,7 +125,10 @@ class UsuarioController
             return;
         }
 
-        if ($this->usuario->actualizarUsuario($identificacion, $data['nombre'], $data['contrasena'], $data['email'], $data['fk_id_rol'])) {
+        // Encriptar la contraseña antes de actualizar
+        $hashedPassword = password_hash($data['contrasena'], PASSWORD_BCRYPT);
+
+        if ($this->usuario->actualizarUsuario($identificacion, $data['nombre'], $hashedPassword, $data['email'], $data['fk_id_rol'])) {
             echo json_encode(["message" => "Usuario actualizado exitosamente"]);
             http_response_code(200);
         } else {
@@ -149,7 +155,7 @@ class UsuarioController
         }
     }
 
-
+    // Actualizar parcialmente un usuario
     public function patch($id) {
         if ($_SERVER['REQUEST_METHOD'] == 'PATCH') {
             $data = json_decode(file_get_contents("php://input"), true);
@@ -169,5 +175,4 @@ class UsuarioController
             }
         }
     }
-    
 }

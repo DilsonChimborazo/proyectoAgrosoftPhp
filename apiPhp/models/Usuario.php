@@ -132,8 +132,9 @@ class Usuario
         }
     }
 
-
-    public function actualizarParcial($id, $data) {
+    // Actualizar parcialmente un usuario
+    public function actualizarParcial($id, $data)
+    {
         try {
             $fields = [];
             foreach ($data as $key => $value) {
@@ -158,5 +159,4 @@ class Usuario
             return false;
         }
     }
-    
 }

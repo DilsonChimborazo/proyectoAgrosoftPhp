@@ -7,7 +7,7 @@ import logoAgrosis from "../../../public/logo_proyecto-removebg-preview.png";
 import logoSena from "../../../public/logoSena.png";
 
 export default function Login() {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showcontrasena, setShowcontrasena] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
@@ -17,12 +17,12 @@ export default function Login() {
     formState: { errors },
   } = useCustomForm(loginSchema, {
     identificacion: "",
-    password: "",
+    contrasena: "",
   });
 
   const onSubmit = async (data: LoginData) => {
     setError(null);
-
+    
     const apiUrl = import.meta.env.VITE_API_URL;
     if (!apiUrl) {
       setError("La URL de la API no está definida");
@@ -30,30 +30,34 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch(`${apiUrl}token/`, {
+      const response = await fetch(`${apiUrl}auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
 
       const responseData = await response.json();
+
       if (!response.ok) {
-        setError("Usuario no registrado o contraseña incorrecta.");
+        setError(responseData.message || "Usuario no registrado o contraseña incorrecta.");
         return;
       }
 
-      localStorage.setItem("token", responseData.access);
-      if (responseData.refresh) localStorage.setItem("refreshToken", responseData.refresh);
-      if (responseData.user) localStorage.setItem("user", JSON.stringify(responseData.user));
+      // Guardamos el token en localStorage
+      localStorage.setItem("token", responseData.token);
+      localStorage.setItem("user", JSON.stringify(data.identificacion));
+
+      // Redirigimos a la página principal
       navigate("/principal");
     } catch (err: any) {
-      setError(err.message);
+      setError("Error de conexión con el servidor.");
     }
   };
 
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-white relative">
       <div className="flex w-3/5 h-4/5 bg-white shadow-lg rounded-lg overflow-hidden">
+        
         {/* Sección izquierda con formulario */}
         <div className="w-1/2 flex flex-col justify-center p-8 bg-white">
           <div className="flex items-center justify-center space-x-4 mb-4">
@@ -62,10 +66,11 @@ export default function Login() {
           </div>
           <p className="text-center text-gray-500 mb-6">¡Bienvenido!</p>
           {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+          
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
               <input
-                type="text" 
+                type="text"
                 placeholder="Identificación"
                 {...register("identificacion")}
                 className="w-full px-4 py-2 border rounded-md"
@@ -74,36 +79,40 @@ export default function Login() {
                 <p className="text-red-500 text-sm">{errors.identificacion.message}</p>
               )}
             </div>
+
             <div className="relative">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showcontrasena ? "text" : "password"}
                 placeholder="Contraseña"
-                {...register("password")}
+                {...register("contrasena")}
                 className="w-full px-4 py-2 border rounded-md"
               />
               <button
                 type="button"
-                onClick={() => setShowPassword(!showPassword)}
+                onClick={() => setShowcontrasena(!showcontrasena)}
                 className="absolute inset-y-0 right-4 flex items-center"
               >
-                {showPassword ? <EyeOff /> : <Eye />}
+                {showcontrasena ? <EyeOff /> : <Eye />}
               </button>
-              {errors.password && (
-                <p className="text-red-500 text-sm">{errors.password.message}</p>
+              {errors.contrasena && (
+                <p className="text-red-500 text-sm">{errors.contrasena.message}</p>
               )}
             </div>
+
             <p className="text-sm text-gray-500 text-center">
               ¿Olvidaste tu contraseña?{" "}
               <a href="/solicitarRecuperacion" className="text-green-600">
                 Recupérala aquí
               </a>
             </p>
+
             <p className="text-sm text-gray-500 text-center">
               ¿No estás registrado?{" "}
               <a href="/register" className="text-green-600">
                 Regístrate aquí
               </a>
             </p>
+
             <button type="submit" className="w-full py-2 bg-green-600 text-white rounded-md">
               Iniciar sesión
             </button>

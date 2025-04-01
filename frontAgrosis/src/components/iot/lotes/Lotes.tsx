@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useLotes } from '../../../hooks/iot/lote/useLotes';
 import Tabla from '../../globales/Tabla';
 import VentanaModal from '../../globales/VentanasModales';
-import Button from "@/components/globales/Button";
 import { useNavigate } from "react-router-dom";
 
 const Lotes = () => {
@@ -40,9 +39,9 @@ const Lotes = () => {
   const lotesList = Array.isArray(lotes) ? lotes : [];
 
   const mappedLotes = lotesList.map(lote => ({
-    id: lote.id,
+    id: lote.id_lote,
     nombre: lote.nombre_lote,
-    dimencion: lote.dimencion,
+    dimencion: lote.dimension,
     fk_id_ubicacion: lote.fk_id_ubicacion 
       ? `${lote.fk_id_ubicacion.latitud}, ${lote.fk_id_ubicacion.longitud}` 
       : 'Sin ubicación',

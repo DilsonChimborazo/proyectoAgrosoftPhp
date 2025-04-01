@@ -3,7 +3,7 @@ USE agrosof;
 
 CREATE TABLE Rol (
     id_rol INT AUTO_INCREMENT PRIMARY KEY,
-    nombre_rol ENUM('aprendiz', 'pasante', 'instructor') NOT NULL,
+    nombre_rol ENUM('aprendiz', 'pasante', 'administrador') NOT NULL,
     fecha_creacion DATE
 );
 
