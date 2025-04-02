@@ -19,7 +19,7 @@ Este endpoint permite actualizar un campo de rol mediante su ID.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/rol/{id_rol}
+http://127.0.0.1:8000/apiPhp/rol/{id_rol}
 ```
 
 ### **Cuerpo de la solicitud**

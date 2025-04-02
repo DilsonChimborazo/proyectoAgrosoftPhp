@@ -21,7 +21,7 @@ Solicitud utilizada para obtener las eras registradas en el sistema mediante el 
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/eras/{id}
+http://127.0.0.1:8000/apiPhp/eras/{id_eras}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -32,7 +32,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_eras": 1,
     "descripcion": "Era de cultivo de maíz",
     "fk_id_lote": 2
 }

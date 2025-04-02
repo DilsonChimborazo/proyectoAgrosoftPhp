@@ -20,14 +20,14 @@ Solicitud utilizada para la actualización de los datos de un residuo previament
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/residuos/{id}
+http://127.0.0.1:8000/apiPhp/residuos/{id_residuo}
 ```
 ### **Cuerpo de la solicitud**
 Envía un objeto JSON con los siguientes campos:
 
 ```json
 {
-    "nombre_residuo": "Restos de poda",
+    "nombre": "Restos de poda",
     "fecha": "2024-03-26",
     "descripcion": "Residuos orgánicos de poda y mantenimiento",
     "fk_id_cultivo": 4,
@@ -37,7 +37,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |---------------- |--------|-----------|-----------------------------|
-| nombre_residuo | string | ✅       | Nombre del residuo|
+| nombre          | string | ✅       | Nombre del residuo|
 | fecha          | string | ✅       | Fecha en que se recoge el residuo (YYYY-MM-DD)|
 | descripcion    | string | ✅       | Descripcion del residuo |
 | fk_id_cultivo  | integer| ✅       | Cultivo del cual se recoge el residuo  |
@@ -50,8 +50,8 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
-    "nombre_residuo": "Restos de poda",
+    "id_cultivo": 1,
+    "nombre": "Restos de poda",
     "fecha": "2024-03-26",
     "descripcion": "Residuos orgánicos de poda",
     "fk_id_cultivo": "Tomates Orgánicos",
@@ -62,7 +62,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |-----------------|--------|-----------------------------|
-| nombre_residuo  | string | Nombre del residuo|
+| nombre          | string | Nombre del residuo|
 | fecha           | string | Fecha en que se recoge el residuo     |
 | descripcion     | string | Descripcion del residuo |
 | fk_id_cultivo| integer | Cultivo del cual se recoge el residuo|

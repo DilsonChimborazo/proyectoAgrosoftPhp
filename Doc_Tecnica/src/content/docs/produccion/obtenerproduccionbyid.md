@@ -19,7 +19,7 @@ Solicitud utilizada para obtener un registro de producción dentro del sistema m
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/produccion/{id_produccion}
+http://127.0.0.1:8000/apiPhp/produccion/{id_produccion}
 ```
 ### **Cuerpo de la solicitud**
 
@@ -29,18 +29,18 @@ Si la solicitud es correcta, recibirás un código **201**  con la siguiente est
 ```json
 {
     "id_produccion": 1,
-    "fk_id": 5,
-    "cantidad_produccion": "150.5000000000",
-    "fecha": "2025-03-26"
+    "fk_id_cultivo": 5,
+    "cantidad_producida": "150.5000000000",
+    "fecha_produccion": "2025-03-26"
 }
 ```
 :::markdown
 | Campo              | Tipo   | Descripción                |
 |--------------------|--------|-----------------------------|
 | id_produccion      | integer| Identificador único de la producción |
-| fk_id              | integer| Identificador del cultivo asociado      |
-| cantidad_produccion| decimal| Cantidad producida      |
-| fecha              | date   | Fecha del registro de producción      |
+| fk_id_cultivo              | integer| Identificador del cultivo asociado      |
+| cantidad_producida| decimal| Cantidad producida      |
+| fecha_produccion              | date   | Fecha del registro de producción      |
 
 :::
 

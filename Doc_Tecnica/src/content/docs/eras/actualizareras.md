@@ -21,7 +21,7 @@ Solicitud utilizada para la actualización de los datos de una era ya registrada
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/eras/{id}
+http://127.0.0.1:8000/apiPhp/eras/{id_eras}
 ```
 
 ### **Cuerpo de la solicitud**

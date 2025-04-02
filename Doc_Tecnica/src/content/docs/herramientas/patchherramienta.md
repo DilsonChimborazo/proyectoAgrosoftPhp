@@ -21,7 +21,7 @@ Solicitud utilizada para modificar uno mas atributos de una herramienta sin nece
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/herramienta/{id}
+http://127.0.0.1:8000/apiPhp/herramienta/{id_herramienta}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -36,7 +36,7 @@ Envía un objeto JSON con el campo que deseas actualizar:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id             | number | ✅       | Identificador único de la herramienta   |
+| id_herramienta             | number | ✅       | Identificador único de la herramienta   |
 | nombre_h       | text   | ✅       | Nombre de la herramienta      |
 | fecha_prestamo | date   | ✅       | Fecha de prestao de la herramienta     |
 | estado         | string | ✅       | Estado actual de la herramienta     |
@@ -48,7 +48,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_herramienta": 1,
     "nombre_h": "Taladro inalámbrico",
     "fecha_prestamo": "2025-05-12",
     "estado": "En mantenimiento"
@@ -58,7 +58,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id             | number | Identificador único de la herramienta  |
+| id_herramienta             | number | Identificador único de la herramienta  |
 | nombre_h       | text   | Nombre de la herramienta      |
 | fecha_prestamo | date   | Fecha de prestamo de la herramienta     |
 | estado         | string | Estado actual de la herramienta      |

@@ -21,7 +21,7 @@ Solicitud utilizada la Eliminacion a una herramienta especifica registrada en el
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/herramienta/{id}
+http://127.0.0.1:8000/apiPhp/herramienta/{id_herramienta}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -30,7 +30,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id             | number | ✅       | Identificador único de la herramienta  |
+| id_herramienta             | number | ✅       | Identificador único de la herramienta  |
 
 ## **Respuesta**
 

@@ -18,7 +18,7 @@ Solicitud utilizada para el registro de nuevas producciones.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/produccion/
+http://127.0.0.1:8000/apiPhp/produccion/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -26,17 +26,17 @@ Envía un objeto JSON con los siguientes campos:
 
 ```json
 {
-    "fk_id": 5,
-    "cantidad_produccion": "150.5000000000",
-    "fecha": "2025-03-26"
+    "fk_id_cultivo": 5,
+    "cantidad_producida": "150.5000000000",
+    "fecha_produccion": "2025-03-26"
 }
 ```
 
 | Campo               | Tipo     | Requerido |Descripción                         |
 |---------------------|----------------------|-------------------------------------|
-| fk_id               | integer  | ✅       | Identificador del cultivo asociado  |
-| cantidad_produccion | decimal  | ✅       | Cantidad producida                  |
-| fecha               | date     | ✅       | Fecha del registro de producción    |
+| fk_id_cultivo               | integer  | ✅       | Identificador del cultivo asociado  |
+| cantidad_producida | decimal  | ✅       | Cantidad producida                  |
+| fecha_produccion               | date     | ✅       | Fecha del registro de producción    |
 
 ## **Respuesta**
 
@@ -45,9 +45,9 @@ Si el registro es exitoso, recibirás un código **201** con la siguiente estruc
 ```json
 {
     "id_produccion": 1,
-    "fk_id": 5,
-    "cantidad_produccion": "150.5000000000",
-    "fecha": "2025-03-26"
+    "fk_id_cultivo": 5,
+    "cantidad_producida": "150.5000000000",
+    "fecha_produccion": "2025-03-26"
 }
 ```
 
@@ -56,9 +56,9 @@ Si el registro es exitoso, recibirás un código **201** con la siguiente estruc
 | Campo               | Tipo     | Descripción                         |
 |---------------------|----------|-------------------------------------|
 | id_produccion      | integer  | Identificador único de la producción |
-| fk_id              | integer  | Identificador del cultivo asociado  |
-| cantidad_produccion | decimal  | Cantidad producida                  |
-| fecha              | date     | Fecha del registro de producción    |
+| fk_id_cultivo              | integer  | Identificador del cultivo asociado  |
+| cantidad_producida | decimal  | Cantidad producida                  |
+| fecha_produccion   | date     | Fecha del registro de producción    |
 
 ---
 

@@ -18,7 +18,7 @@ PUT
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/calendario_lunar/{id_calendario_lunar}
+http://127.0.0.1:8000/apiPhp/calendario_lunar/{id_calendario_lunar}
 ```
 
 ### **Cuerpo de la solicitud**

@@ -21,7 +21,7 @@ Solicitud utilizada para obtener la información de un cultivo específico regis
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/cultivo/{id}
+http://127.0.0.1:8000/apiPhp/cultivo/{id_cultivo}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -32,7 +32,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_cultivo": 1,
     "nombre_cultivo": "Maíz",
     "fecha_plantacion": "2024-03-01",
     "descripcion": "Cultivo de maíz amarillo",

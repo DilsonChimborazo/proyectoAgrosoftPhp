@@ -19,7 +19,7 @@ Este endpoint permite actualizar un rol mediante su ID.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/rol/{id_rol}
+http://127.0.0.1:8000/apiPhp/rol/{id_rol}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -28,14 +28,14 @@ Envía un objeto JSON con los siguientes campos:
 ```json
 {
     "fecha_creacion": "2025-03-27",
-    "rol": "Aprendiz"
+    "nombre_rol": "aprendiz"
 }
 ```
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
 | fecha_creacion | date   | ✅       | fecha creacion del usuario  |
-| rol            | string | ✅       | Nombre del rol              |
+| nombre_rol            | string | ✅       | Nombre del rol              |
 
 ## **Respuesta**
 
@@ -44,7 +44,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 ```json
 {
     "fecha_creacion": "2025-03-27",
-    "rol": "Aprendiz"
+    "nombre_rol": "aprendiz"
 }
 ```
 
@@ -52,7 +52,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
 | fecha_creacion | date   | fecha creacion del usuario  |
-| rol            | string | Nombre del rol              |
+| nombre_rol     | string | Nombre del rol              |
 :::
 
 

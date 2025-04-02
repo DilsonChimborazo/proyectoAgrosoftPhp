@@ -21,7 +21,7 @@ Solicitud utilizada para la eliminación de una pea específica registrado en el
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/pea/{id}
+http://127.0.0.1:8000/apiPhp/pea/{id_pea}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -30,7 +30,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo          | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id             | integer | ✅       | Id pea |
+| id_pea         | integer | ✅       | Id pea |
 
 ## **Respuesta**
 

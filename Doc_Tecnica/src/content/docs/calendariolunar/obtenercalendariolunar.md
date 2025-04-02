@@ -18,7 +18,7 @@ GET
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/calendario-lunar/
+http://127.0.0.1:8000/apiPhp/calendario-lunar/
 ```
 
 ## **Respuesta**

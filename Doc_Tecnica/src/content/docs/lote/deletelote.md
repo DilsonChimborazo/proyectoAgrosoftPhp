@@ -21,7 +21,7 @@ Solicitud utilizada  para eliminar un lote.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/lote/{id}
+http://127.0.0.1:8000/apiPhp/lote/{id_lote}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -30,7 +30,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id      | integer| ✅       | Id del lote  |
+| id_lote      | integer| ✅       | Id del lote  |
 
 
 ## **Respuesta**

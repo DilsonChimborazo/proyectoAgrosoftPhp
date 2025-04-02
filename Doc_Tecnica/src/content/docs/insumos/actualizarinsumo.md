@@ -21,7 +21,7 @@ Solicitud utilizada la actualizacion de los datos de una herramienta ya registra
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/herramientas/{id}
+http://127.0.0.1:8000/apiPhp/insumos/{id_insumo}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -29,7 +29,7 @@ Envía un objeto JSON con los siguientes campos:
 
 ```json
 {
-    "id": 1,
+    "id_insumo": 1,
     "nombre": "Cemento",
     "tipo": "Material de construcción",
     "precio_unidad": 12.75,
@@ -40,7 +40,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id             | number | ✅       | Identificador único del insumo  |
+| id_insumo | number | ✅       | Identificador único del insumo  |
 | nombre         | string | ✅       | Nombre del insumo      |
 | tipo           | string | ✅       | Tipo de insumo (Ej: Material de construcció)      |
 | precio_unidad  | number | ✅       | Precio por unidad     |
@@ -53,7 +53,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_insumo": 1,
     "nombre": "Cemento",
     "tipo": "Material de construcción",
     "precio_unidad": 12.75,
@@ -65,7 +65,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id             | number | Identificador unico del insumo   |
+| id_insumo | number | Identificador unico del insumo   |
 | nombre         | string | Nombre del insumo      |
 | tipo           | string | Tipo de insumo (Ej: Material de construcció)       |
 | precio_unidad  | number | Precio por unidad    |

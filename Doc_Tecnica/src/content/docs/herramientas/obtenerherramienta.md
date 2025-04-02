@@ -21,7 +21,7 @@ Solicitud utilizada para obtener todas las herramientas que estan registradas de
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/herramienta/
+http://127.0.0.1:8000/apiPhp/herramienta/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -33,13 +33,13 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 ```json
 [
     {
-        "id": 1,
+        "id_herramienta": 1,
         "nombre_h": "Taladro eléctrico",
         "fecha_prestamo": "2025-05-12",
         "estado": "Disponible"
     },
     {
-        "id": 2,
+        "id_herramienta": 2,
         "nombre_h": "Llave inglesa",
         "fecha_prestamo": "2025-06-01",
         "estado": "En uso"
@@ -50,7 +50,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id             | number | Identificador único de la herramienta  |
+| id_herramienta             | number | Identificador único de la herramienta  |
 | nombre_h       | text   | Nombre de la herramienta     |
 | fecha_prestamo | date   | Fecha de préstamo de la herramienta     |
 | estado         | string | Estado actual de la herramienta   |

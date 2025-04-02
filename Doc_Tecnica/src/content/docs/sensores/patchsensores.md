@@ -21,7 +21,7 @@ Solicitud utilizada, la actualizacion de los datos de un sensor ya registrado pr
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/sensores/{id}
+http://127.0.0.1:8000/apiPhp/sensores/{id_sensor}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -43,7 +43,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_sensor": 1,
     "nombre_sensor": "Sensor de Humedad",
     "tipo_sensor": "DHT22",
     "unidad_medida": "°C",

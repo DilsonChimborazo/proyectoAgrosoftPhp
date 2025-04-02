@@ -21,7 +21,7 @@ Solicitud utilizada para generar el token e iniciar sesion autenticado por el si
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/token/
+http://127.0.0.1:8000/apiPhp/token/
 ```
 
 ### **Cuerpo de la solicitud**

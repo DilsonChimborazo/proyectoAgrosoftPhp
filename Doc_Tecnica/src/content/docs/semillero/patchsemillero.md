@@ -18,7 +18,7 @@ PATCH
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/semillero/{id_semillero}
+http://127.0.0.1:8000/apiPhp/semilleros/{id_semillero}
 ```
 
 ### **Cuerpo de la solicitud**

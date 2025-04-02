@@ -21,7 +21,7 @@ Solicitud utilizada la actualizacion de los datos de un cultivo ya registrado pr
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/cultivo/{id}
+http://127.0.0.1:8000/apiPhp/cultivo/{id_cultivo}
 ```
 
 ### **Cuerpo de la solicitud**

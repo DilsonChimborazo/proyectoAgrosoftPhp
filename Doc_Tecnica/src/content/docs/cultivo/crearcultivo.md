@@ -19,7 +19,7 @@ Solicitud utilizada para el registro de nuevos cultivos en el sistema.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/cultivo/
+http://127.0.0.1:8000/apiPhp/cultivo/
 ```
 
 ### **Cuerpo de la solicitud**

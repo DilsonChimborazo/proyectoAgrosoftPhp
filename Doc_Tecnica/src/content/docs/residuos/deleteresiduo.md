@@ -20,7 +20,7 @@ Solicitud utilizada para el la Eliminacion a un residuo especifico registrado en
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/residuos/{id}
+http://127.0.0.1:8000/apiPhp/residuos/{id_residuo}
 ```
 ### **Cuerpo de la solicitud**
 Envía un objeto JSON con los siguientes campos:
@@ -28,7 +28,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |---------------- |--------|-----------|-----------------------------|
-| id             | integer | ✅       | ID del residuo|
+| id_residuo      | integer | ✅       | ID del residuo|
 
 
 ## **Respuesta**

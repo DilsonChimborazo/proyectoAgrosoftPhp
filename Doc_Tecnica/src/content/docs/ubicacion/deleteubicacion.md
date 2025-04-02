@@ -21,7 +21,7 @@ Solicitud utilizada para eliminar ubicaciones.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/ubicacion/{id}
+http://127.0.0.1:8000/apiPhp/ubicacion/{id_ubicacion}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -30,7 +30,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id    | integer | ✅       | Identificador de la ubicacion |
+| id_ubicacion    | integer | ✅       | Identificador de la ubicacion |
 
 
 ## **Respuesta**

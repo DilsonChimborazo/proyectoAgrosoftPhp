@@ -18,7 +18,7 @@ Solicitud utilizada para el registro de eventos en el calendario lunar.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/calendario_lunar/
+http://127.0.0.1:8000/apiPhp/calendario_lunar/
 ```
 
 ### **Cuerpo de la solicitud**

@@ -21,7 +21,7 @@ Solicitud utilizada para la eliminación de un cultivo específico registrado en
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/cultivo/{id}
+http://127.0.0.1:8000/apiPhp/cultivo/{id_cultivo}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -30,7 +30,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo          | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id             | integer | ✅       | Id del cultivo |
+| id_cultivo             | integer | ✅       | Id del cultivo |
 
 ## **Respuesta**
 

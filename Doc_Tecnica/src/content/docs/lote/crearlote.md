@@ -21,7 +21,7 @@ Solicitud utilizada  para el resgistro de nuevos lotes.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/lote/
+http://127.0.0.1:8000/apiPhp/lote/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -29,7 +29,7 @@ Envía un objeto JSON con los siguientes campos:
 
 ```json
 {
-    "dimencion": 100,
+    "dimension": 100,
     "nombre_lote": "Lote A",
     "fk_id_ubicacion": 3,
     "estado": "disponible"
@@ -38,7 +38,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| dimencion      | integer| ✅       | dimencion del lote  |
+| dimension      | integer| ✅       | dimension del lote  |
 | nombre_lote    | string | ✅       | Nombre del lote     |
 | fk_id_ubicacion| integer| ✅       | Ubicacion del lote   |
 | estado         | string | ✅       | Estado del lote     | 
@@ -50,7 +50,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 ```json
 {
     "id": 1,
-    "dimencion": 100,
+    "dimension": 100,
     "nombre_lote": "Lote A",
     "fk_id_ubicacion": 3,
     "estado": "disponible"
@@ -60,7 +60,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| dimencion      | string | dimencion del lote |
+| dimension      | string | dimension del lote |
 | nombre_lote    | string | Nombre del lote  |
 | fk_id_ubicacion| integer| Ubicacion del lote |
 | estado         | string | Estado del lote(disponible/no disponible) |

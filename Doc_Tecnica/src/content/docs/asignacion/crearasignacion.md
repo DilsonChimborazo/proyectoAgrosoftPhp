@@ -18,7 +18,7 @@ Solicitud utilizada para el registro de asignaciones de actividades a usuarios.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/asignacion_actividad/
+http://127.0.0.1:8000/apiPhp/asignacion_actividad/
 ```
 
 ### **Cuerpo de la solicitud**

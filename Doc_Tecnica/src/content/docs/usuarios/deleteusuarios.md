@@ -21,7 +21,7 @@ Solicitud utilizada la Eliminacion a un usuario especifico registrado en el sist
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/usuario/{identificacion}
+http://127.0.0.1:8000/apiPhp/usuario/{identificacion}
 ```
 
 ### **Cuerpo de la solicitud**

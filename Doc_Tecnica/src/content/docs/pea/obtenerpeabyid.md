@@ -20,7 +20,7 @@ Solicitud utilizada para obtener los pea previamente registrados en el sistema p
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/pea/{id}
+http://127.0.0.1:8000/apiPhp/pea/{id_pea}
 ```
 ### **Cuerpo de la solicitud**
 No se requiere cuerpo de solicitud.
@@ -31,8 +31,8 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
-    "nombre_pea": "plaga",
+    "id_pea": 1,
+    "nombre": "plaga",
     "descripcion": "Descripción actualizada del Pea"
 }
 ```
@@ -40,7 +40,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| nombre_pea     | string | plaga               |
+| nombre         | string | plaga               |
 | descripcion    | string | Descripción actualizada del Pea |
 :::
 

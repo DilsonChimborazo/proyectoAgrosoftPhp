@@ -18,7 +18,7 @@ Solicitud utilizada para la eliminación de un registro de producción específi
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/produccion/{id_produccion}
+http://127.0.0.1:8000/apiPhp/produccion/{id_produccion}
 ```
 
 ### **Cuerpo de la solicitud**

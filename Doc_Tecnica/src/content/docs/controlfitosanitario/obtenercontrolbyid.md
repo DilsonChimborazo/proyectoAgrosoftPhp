@@ -20,7 +20,7 @@ Solicitud utilizada para la obtener los datos de un control fitosanitario regist
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/control_fitosanitario/{id}
+http://127.0.0.1:8000/apiPhp/control_fitosanitario/{id_control_fitosanitario}
 ```
 ### **Cuerpo de la solicitud**
 
@@ -30,7 +30,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_control_fitosanitario": 1,
     "fecha_control": "2024-03-26",
     "descripcion": "Aplicación de fungicida ecológico",
     "fk_id_desarrollan": "plaga en el cultivo de maiz"

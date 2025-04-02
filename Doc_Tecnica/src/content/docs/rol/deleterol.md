@@ -21,7 +21,7 @@ Solicitud utilizada la Eliminacion a un rol especifico registrado en el sistema.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/rol/{id_rol}
+http://127.0.0.1:8000/apiPhp/rol/{id_rol}
 ```
 
 ### **Cuerpo de la solicitud**

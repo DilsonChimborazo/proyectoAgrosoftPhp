@@ -21,7 +21,7 @@ Solicitud utilizada la Eliminacion a una era en especifico registrada en el sist
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/eras/{id}
+http://127.0.0.1:8000/apiPhp/eras/{id_eras}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -29,7 +29,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id | string | ✅       | Identificador de la era   |
+| id_eras | string | ✅       | Identificador de la era   |
 
 ## **Respuesta**
 

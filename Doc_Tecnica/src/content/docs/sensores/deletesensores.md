@@ -21,7 +21,7 @@ Solicitud utilizada  para eliminar un sensor del sistema.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/sensores/{id}
+http://127.0.0.1:8000/apiPhp/sensores/{id_sensor}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -29,7 +29,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id    | integer | ✅       | Identificador del sensor |
+| id_sensor    | integer | ✅       | Identificador del sensor |
 
 ## **Respuesta**
 

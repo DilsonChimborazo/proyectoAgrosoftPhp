@@ -18,7 +18,7 @@ PUT
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/especie/{id_especie}
+http://127.0.0.1:8000/apiPhp/especie/{id_especie}
 ```
 
 ### **Cuerpo de la solicitud**

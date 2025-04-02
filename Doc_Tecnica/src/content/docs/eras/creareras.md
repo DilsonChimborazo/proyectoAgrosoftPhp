@@ -21,7 +21,7 @@ Solicitud utilizada para el resgistro de nuevas eras.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/eras/
+http://127.0.0.1:8000/apiPhp/eras/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -36,7 +36,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
-| id             | string | ✅       | Id de la era     |
+| id_eras             | string | ✅       | Id de la era     |
 | descripcion    | string | ✅       | descripcion de la era    |
 | fk_id_lote     | integer| ✅       | ID del lote en el que se encuentra |
 

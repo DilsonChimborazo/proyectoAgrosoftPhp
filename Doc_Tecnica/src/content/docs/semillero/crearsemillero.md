@@ -18,7 +18,7 @@ Solicitud utilizada para el registro de nuevos semilleros.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/semilleros/
+http://127.0.0.1:8000/apiPhp/semilleros/
 ```
 
 ### **Cuerpo de la solicitud**

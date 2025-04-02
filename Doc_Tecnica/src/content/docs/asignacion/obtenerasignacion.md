@@ -18,7 +18,7 @@ Solicitud utilizada para obtener todos los registros de asignación de actividad
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/asignacion_actividad/
+http://127.0.0.1:8000/apiPhp/asignacion_actividad/
 ```
 
 ## **Respuesta**

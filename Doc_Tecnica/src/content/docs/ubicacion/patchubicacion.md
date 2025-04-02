@@ -21,7 +21,7 @@ Solicitud utilizada para la actualización de los datos de la ubicacion ya regis
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/ubicacion/{id}
+http://127.0.0.1:8000/apiPhp/ubicacion/{id_ubicacion}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -44,7 +44,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_ubicacion": 1,
     "latitud": 42,
     "longitud": -74.08175
 }
@@ -53,7 +53,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id           | integer |identificador de la ubicacion   |
+| id_ubicacion           | integer |identificador de la ubicacion   |
 | latitud      | integer |latitud de la ubicacion  |
 | longitud     | integer |longitud de la ubicacion |
 :::

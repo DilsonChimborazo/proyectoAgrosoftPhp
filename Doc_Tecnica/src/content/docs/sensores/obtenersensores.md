@@ -22,7 +22,7 @@ Solicitud utilizada para obtener los sensores que estan registrados dentro del s
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/sensores/
+http://127.0.0.1:8000/apiPhp/sensores/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -34,7 +34,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
+    "id_sensor": 1,
     "nombre_sensor": "Sensor de temperatura",
     "tipo_sensor": "DHT22",
     "unidad_medida": "°C",

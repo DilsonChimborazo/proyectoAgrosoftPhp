@@ -21,7 +21,7 @@ Esta solicitud se utiliza para modificar uno o más campos de un insumo sin nece
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/insumo/{id}
+http://127.0.0.1:8000/apiPhp/insumos/{id_insumo}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -40,7 +40,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id             | number | Identificador unico del insumo   |
+| id_insumo      | number | Identificador unico del insumo   |
 | nombre         | string | Nombre del insumo      |
 | tipo           | string | Tipo de insumo (Ej: Material de construcció)       |
 | precio_unidad  | number | Precio por unidad    |

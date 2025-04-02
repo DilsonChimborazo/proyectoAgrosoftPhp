@@ -21,7 +21,7 @@ Solicitud utilizada para obtener los lotes que estan registrados dentro del sist
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/lote/{id}
+http://127.0.0.1:8000/apiPhp/lote/{id_lote}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -33,7 +33,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 ```json
 {
     "id": 1,
-    "dimencion": 100,
+    "dimension": 100,
     "nombre_lote": "Lote 1",
     "fk_id_ubicacion": 3,
     "estado": "disponible"
@@ -43,7 +43,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| dimencion      | string | dimencion del lote |
+| dimension      | string | dimension del lote |
 | nombre_lote    | string | Nombre del lote  |
 | fk_id_ubicacion| integer| Ubicacion del lote |
 | estado         | string | Estado del lote(disponible/no disponible) |

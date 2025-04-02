@@ -21,7 +21,7 @@ Solicitud utilizada la actualizacion de los datos de un usuario ya registrado pr
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/usuario/{identificacion}
+http://127.0.0.1:8000/apiPhp/usuario/{identificacion}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -49,7 +49,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
     "apellido": "Chimborazo",
     "email": "Dilson@gmail.com",
     "password": "123456.",
-    "fk_id_rol": "Aprendiz"
+    "fk_id_rol": 1
 }
 ```
 

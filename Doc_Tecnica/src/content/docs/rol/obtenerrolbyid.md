@@ -19,7 +19,7 @@ Este endpoint permite obtener un rol por id registrados en la base de datos.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/rol/{id_rol}
+http://127.0.0.1:8000/apiPhp/rol/{id_rol}
 ```
 ---
 
@@ -30,9 +30,9 @@ Si la solicitud es exitosa, recibirás un código **200** con la siguiente estru
 ```json
 [
     {
-        "id": 1,
+        "id_rol": 1,
         "fecha_creacion": "2025-03-27",
-        "rol": "Aprendiz"
+        "nombre_rol": "aprendiz"
     },
 ]
 
@@ -41,7 +41,7 @@ Si la solicitud es exitosa, recibirás un código **200** con la siguiente estru
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
 | fecha_creacion | date   | ✅       | fecha creacion del usuario  |
-| rol            | string | ✅       | Nombre del rol              |
+| nombre_rol            | string | ✅       | Nombre del rol              |
 
 ### **Códigos de respuesta**
 - **201**: rol obtenido con exito, devuelve el array del rol registrado.

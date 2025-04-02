@@ -18,7 +18,7 @@ GET
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/semilleros
+http://127.0.0.1:8000/apiPhp/semilleros
 ```
 
 ## **Respuesta**

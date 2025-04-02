@@ -21,7 +21,7 @@ Solicitud utilizada para registrar un nuevo insumo en el sistema.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/insumo/
+http://127.0.0.1:8000/apiPhp/insumos/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -29,7 +29,7 @@ Envía un objeto JSON con los siguientes campos:
 
 ```json
 {
-    "id": 1,
+    "id_insumo": 1,
     "nombre": "Cemento",
     "tipo": "Material de construcción",
     "precio_unidad": 12.75,
@@ -40,7 +40,7 @@ Envía un objeto JSON con los siguientes campos:
 
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id             | number | Identificador unico del insumo   |
+| id_insumo      | number | Identificador unico del insumo   |
 | nombre         | string | Nombre del insumo      |
 | tipo           | string | Tipo de insumo (Ej: Material de construcció)       |
 | precio_unidad  | number | Precio por unidad    |

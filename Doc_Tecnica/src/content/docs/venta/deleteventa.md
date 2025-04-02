@@ -1,32 +1,37 @@
 ---
-title: "Eliminar venta"
-description: "Elimina una venta específica registrada en el sistema."
----
-
-## Descripción:
-Solicitud utilizada para la eliminación de una venta específica registrada en el sistema.
+title: "Eliminar Venta"
+description: " Permite eliminar una venta específica registrada en el sistema."
 
 ---
 
-## Método: 
+## **Descripción**
+Solicitud diseñada para eliminar una venta específica registrada en el sistema de manera eficiente.
+
+---
+
+## **Método**
+```http
+DELETE
 ```
- DELETE
-```
+
 ---
 
-# **Solicitud**
+## **Solicitud**
 
 ### **Endpoint**
-```
-http://127.0.0.1:8000/api/venta/{id_venta}
+```http
+http://127.0.0.1:8000/apiPhp/venta/{id_venta}
 ```
 
-### **Cuerpo de la solicitud**
-No se requiere cuerpo en la solicitud.
+### **Cuerpo de la Solicitud**
+No se requiere enviar un cuerpo en la solicitud.
+
+---
 
 ## **Respuesta**
 
-Si la eliminación es exitosa, recibirás un código **200** con la siguiente estructura:
+### **Éxito**
+Si la eliminación es exitosa, recibirás un código **200 OK** con el siguiente mensaje:
 
 ```json
 {
@@ -34,12 +39,13 @@ Si la eliminación es exitosa, recibirás un código **200** con la siguiente es
 }
 ```
 
-### **Códigos de respuesta**
-- **200**: Eliminación exitosa.
-- **400**: Solicitud incorrecta o datos inválidos.
-- **500**: Error del servidor.
+### **Códigos de Respuesta**
+- **200**: Venta eliminada exitosamente.
+- **400**: Error en la solicitud debido a datos inválidos o inexistentes.
+- **500**: Error interno en el servidor.
 
 ---
 
-📄 **Nota:** Solo los administradores o usuarios con permisos pueden eliminar registros de venta en el sistema.
+📝 **Nota:** Solo los administradores o usuarios con los permisos adecuados están autorizados para realizar la eliminación de registros de venta en el sistema.
 
+---

@@ -20,22 +20,22 @@ Solicitud utilizada para el registro de nuevos PEA en el sistema.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/pea/
+http://127.0.0.1:8000/apiPhp/pea/
 ```
 ### **Cuerpo de la solicitud**
 Envía un objeto JSON con los siguientes campos:
 
 ```json
 {
-    "nombre_pea": "plaga",
+    "nombre": "plaga",
     "descripcion": "Descripción del Pea"
 }
 ```
 
-| Campo           | Tipo   | Requerido | Descripción                |
+| Campo          | Tipo   | Requerido | Descripción                 |
 |----------------|--------|-----------|-----------------------------|
-| nombre_pea      | string | ✅       | Nombre del pea(plaga/enfermedad/arvense)  |
-| descripcion     | string | ✅       | Descripcion de la pea(plaga/enfermedad/arvense)|
+| nombre         | string | ✅       | Nombre del pea(plaga/enfermedad/arvense)  |
+| descripcion    | string | ✅       | Descripcion de la pea(plaga/enfermedad/arvense)|
 
 ## **Respuesta**
 
@@ -43,8 +43,8 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 
 ```json
 {
-    "id": 1,
-    "nombre_pea": "plaga",
+    "id_pea": 1,
+    "nombre": "plaga",
     "descripcion": "Descripción del pea"
 }
 ```
@@ -52,7 +52,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| nombre_pea     | string | plaga               |
+| nombre         | string | plaga               |
 | descripcion    | string | Descripción actualizada del Pea |
 :::
 

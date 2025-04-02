@@ -18,7 +18,7 @@ POST
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/especie
+http://127.0.0.1:8000/apiPhp/especie
 ```
 
 ### **Cuerpo de la solicitud**

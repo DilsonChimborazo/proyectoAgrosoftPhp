@@ -21,7 +21,7 @@ Solicitud utilizada para el resgistro de nuevos usuarios.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/usuario/
+http://127.0.0.1:8000/apiPhp/usuario/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -58,7 +58,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
     "apellido": "Chimborazo",
     "email": "Dilson@gmail.com",
     "password": "123456.",
-    "fk_id_rol": "Aprendiz"
+    "fk_id_rol": 1
 }
 ```
 

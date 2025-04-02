@@ -20,7 +20,7 @@ Solicitud utilizada para la actualización de los datos de un cultivo previament
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/cultivo/{id}
+http://127.0.0.1:8000/apiPhp/cultivo/{id_cultivo}
 ```
 ### **Cuerpo de la solicitud**
 Envía un objeto JSON con los siguientes campos:

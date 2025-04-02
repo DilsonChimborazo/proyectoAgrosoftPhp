@@ -19,7 +19,7 @@ Este endpoint permite obtener todos los roles registrados en la base de datos.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/rol/
+http://127.0.0.1:8000/apiPhp/rol/
 ```
 ---
 
@@ -30,14 +30,14 @@ Si la solicitud es exitosa, recibirás un código **200** con la siguiente estru
 ```json
 [
     {
-        "id": 1,
+        "id_rol": 1,
         "fecha_creacion": "2025-03-27",
-        "rol": "Aprendiz"
+        "nombre_rol": "aprendiz"
     },
     {
-        "id": 2,
+        "id_rol": 2,
         "fecha_creacion": "2025-03-27",
-        "rol": "Administrador"
+        "nombre_rol": "administrador"
     }
 ]
 
@@ -46,7 +46,7 @@ Si la solicitud es exitosa, recibirás un código **200** con la siguiente estru
 | Campo           | Tipo   | Requerido | Descripción                |
 |----------------|--------|-----------|-----------------------------|
 | fecha_creacion | date   | ✅       | fecha creacion del usuario  |
-| rol            | string | ✅       | Nombre del rol              |
+| nombre_rol            | string | ✅       | Nombre del rol              |
 
 ### **Códigos de respuesta**
 - **201**: rol creado con exito, devuelve el array del rol registrado.

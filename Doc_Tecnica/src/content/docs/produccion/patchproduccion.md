@@ -18,7 +18,7 @@ Solicitud utilizada para la actualización de los datos de un registro de produc
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/produccion/{id_produccion}
+http://127.0.0.1:8000/apiPhp/produccion/{id_produccion}
 ```
 
 ### **Cuerpo de la solicitud**
@@ -32,7 +32,7 @@ Envía un objeto JSON con el campo que deseas actualizar:
 
 | Campo               | Tipo    | Requerido | Descripción                           |
 |--------------------|---------|-----------|---------------------------------------|
-| cantidad_produccion | decimal | ✅       | Cantidad de producción actualizada |
+| cantidad_producida | decimal | ✅       | Cantidad de producción actualizada |
 
 ## **Respuesta**
 
@@ -41,9 +41,9 @@ Si la actualización es exitosa, recibirás un código **200** con la siguiente 
 ```json
 {
     "id_produccion": 1,
-    "fk_id": 3,
-    "cantidad_produccion": 500.75,
-    "fecha": "2025-03-26"
+    "fk_id_cultivo": 3,
+    "cantidad_producida": 500.75,
+    "fecha_produccion": "2025-03-26"
 }
 ```
 

@@ -21,7 +21,7 @@ Solicitud utilizada para obtener las ubicaciones que estan registradas dentro de
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/ubicacion/
+http://127.0.0.1:8000/apiPhp/ubicacion/
 ```
 
 ### **Cuerpo de la solicitud**
@@ -40,7 +40,7 @@ Si las credenciales son correctas, recibirás un código **201** con la siguient
 :::markdown
 | Campo           | Tipo   | Descripción                |
 |----------------|--------|-----------------------------|
-| id           | integer |identificador de la ubicacion   |
+| id_ubicacion           | integer |identificador de la ubicacion   |
 | latitud      | integer |latitud de la ubicacion  |
 | longitud     | integer |longitud de la ubicacion |
 :::

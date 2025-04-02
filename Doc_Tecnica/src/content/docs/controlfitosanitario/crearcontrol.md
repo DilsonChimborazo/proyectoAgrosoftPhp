@@ -20,7 +20,7 @@ Solicitud utilizada para el resgistro de nuevos controles fitosanitarios.
 
 ### **Endpoint**
 ```
-http://127.0.0.1:8000/api/control_fitosanitario/
+http://127.0.0.1:8000/apiPhp/control_fitosanitario/
 ```
 ### **Cuerpo de la solicitud**
 Envía un objeto JSON con los siguientes campos:
